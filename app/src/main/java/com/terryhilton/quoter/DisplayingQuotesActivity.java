@@ -1,8 +1,10 @@
 package com.terryhilton.quoter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DisplayingQuotesActivity extends Activity {
 
@@ -23,6 +25,20 @@ public class DisplayingQuotesActivity extends Activity {
         // Text View data
         TextView bookName = (TextView) findViewById(R.id.bookName);
         TextView quote = (TextView) findViewById(R.id.quote);
+
+
+        //Getting Extra data from intent that started, then grabbing the id of the intent
+        //This is so we can run a series of IF statements to display what appears on this screen
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("id");
+
+        if(id == "CQ"){
+            Toast.makeText(this, "Squad wassup", Toast.LENGTH_LONG).show();
+
+        }
+
+
+
 
 
     }
