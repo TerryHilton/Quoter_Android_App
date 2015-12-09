@@ -31,42 +31,19 @@ public class StartMenuActivity extends Activity {
         // Breaking The Law DRY Soon will incorpate each button with its own class so The code doesnt repeat for each button on the new screen.
         // The code is each button linking to the same activity only the information will be the change.
 
-        Community_Quotes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Setting an ID so we know what view we are coding for in our displayingQuotesActivity
-                String id = "CQ";
-                Intent intent = new Intent(StartMenuActivity.this, DisplayingQuotesActivity.class);
-                startActivity(intent);
-            }
-        });
-        Funny_Quotes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Setting an ID so we know what view we are coding for in our displayingQuotesActivity
-                String id = "FQ";
-                Intent intent = new Intent(StartMenuActivity.this, DisplayingQuotesActivity.class);
-                startActivity(intent);
-            }
-        });
-        Famous_Quotes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Setting an ID so we know what view we are coding for in our displayingQuotesActivity
-                String id = "FMQ";
-                Intent intent = new Intent(StartMenuActivity.this, DisplayingQuotesActivity.class);
-                startActivity(intent);
-            }
-        });
         Life_Quotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Setting an ID so we know what view we are coding for in our displayingQuotesActivity
-                String id = "LQ";
+
+
                 Intent intent = new Intent(StartMenuActivity.this, DisplayingQuotesActivity.class);
+                // Setting an ID so we know what view we are coding for in our display
+                intent.putExtra("id", 1);
+
                 startActivity(intent);
             }
         });
+
 
     }
 
